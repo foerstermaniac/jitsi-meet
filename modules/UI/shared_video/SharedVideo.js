@@ -732,10 +732,9 @@ function requestVideoLink() {
     return new Promise((resolve, reject) => {
         dialog = APP.UI.messageHandler.openDialogWithStates({
             state0: {
-                titleKey: 'dialog.shareVideoTitle',
+                titleKey: 'Welches Video wollen Sie teilen?',//'dialog.shareVideoTitle',
                 html:
                 `<form>
-                    <p>Geben Sie Ihre Zahlungsweise an:</p>
                     <fieldset>
                         <ul style="list-style: none;"><li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/Z5udl0NvzQU">
                         <label>LIVESTREAM</label></li> 
