@@ -733,11 +733,18 @@ function requestVideoLink() {
         dialog = APP.UI.messageHandler.openDialogWithStates({
             state0: {
                 titleKey: 'dialog.shareVideoTitle',
-                html: `
-                    <input name='sharedVideoUrl' type='text'
-                           class='input-control'
-                           data-i18n='[placeholder]defaultLink'
-                           autofocus>`,
+                html:
+                `<form>
+                    <p>Geben Sie Ihre Zahlungsweise an:</p>
+                    <fieldset>
+                        <input name="sharedVideoUrl" type="radio" id="mc" value="https://www.youtube.com/watch?v=MO2qdqrJGqo">
+                        <label for="mc">Livestream</label> 
+                        <input name="sharedVideoUrl" type="radio" id="vi" value="https://www.youtube.com/watch?v=40MJUEQ6RJM">
+                        <label for="vi">Wein 1</label>
+                        <input name="sharedVideoUrl" type="radio" id="ae" value="https://www.youtube.com/watch?v=MFb9DzT6rHc">
+                        <label for="ae">Wein 2</label> 
+                    </fieldset>
+                </form>`,
                 persistent: false,
                 buttons: [
                     { title: cancelButton,
@@ -755,9 +762,10 @@ function requestVideoLink() {
 
                         return;
                     }
-
-                    const sharedVideoUrl = f.sharedVideoUrl;
-
+                    const sharedVideoUrl = $("input[name='sharedVideoUrl']:checked").val();
+                    console.log('New sharedVideoUrl');
+                    console.log(sharedVideoUrl);
+                    
                     if (!sharedVideoUrl) {
                         return;
                     }
