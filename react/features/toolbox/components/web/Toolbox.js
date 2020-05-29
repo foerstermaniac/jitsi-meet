@@ -979,13 +979,7 @@ class Toolbox extends Component<Props, State> {
             <RecordButton
                 key = 'record'
                 showLabel = { true } />,
-            this._shouldShowButton('sharedvideo')
-                && <OverflowMenuItem
-                    accessibilityLabel = { t('toolbar.accessibilityLabel.sharedvideo') }
-                    icon = { IconShareVideo }
-                    key = 'sharedvideo'
-                    onClick = { this._onToolbarToggleSharedVideo }
-                    text = { _sharingVideo ? t('toolbar.stopSharedVideo') : t('toolbar.sharedvideo') } />,
+            // PAUL WAR HIER UND NAHM DEN KNOPF MIT
             this._shouldShowButton('etherpad')
                 && <SharedDocumentButton
                     key = 'etherpad'
@@ -1179,6 +1173,10 @@ class Toolbox extends Component<Props, State> {
                 && this._isDesktopSharingButtonVisible()) {
             buttonsLeft.push('desktop');
         }
+        // PAUL WAR HIER und hast das eingefügt        
+        if (this._shouldShowButton('sharedvideo')) {
+            buttonsLeft.push('sharedvideo');
+        }
         if (this._shouldShowButton('raisehand')) {
             buttonsLeft.push('raisehand');
         }
@@ -1242,6 +1240,14 @@ class Toolbox extends Component<Props, State> {
                 <div className = 'button-group-left'>
                     { buttonsLeft.indexOf('desktop') !== -1
                         && this._renderDesktopSharingButton() }
+                    {/* PAUL WAR HIER und hat das eingefügt */}
+                    { buttonsLeft.indexOf('sharedvideo') !== -1
+                        && <ToolbarButton
+                            accessibilityLabel = { t('toolbar.accessibilityLabel.sharedvideo') }
+                            icon = { IconShareVideo }
+                            key = 'sharedvideo'
+                            onClick = { this._onToolbarToggleSharedVideo } />   
+                        }
                     { buttonsLeft.indexOf('raisehand') !== -1
                         && <ToolbarButton
                             accessibilityLabel = { t('toolbar.accessibilityLabel.raiseHand') }
