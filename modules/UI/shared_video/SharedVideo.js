@@ -737,12 +737,31 @@ function requestVideoLink() {
                 `<form>
                     <p>Geben Sie Ihre Zahlungsweise an:</p>
                     <fieldset>
-                        <input name="sharedVideoUrl" type="radio" id="mc" value="https://www.youtube.com/watch?v=MO2qdqrJGqo">
-                        <label for="mc">Livestream</label> 
-                        <input name="sharedVideoUrl" type="radio" id="vi" value="https://www.youtube.com/watch?v=40MJUEQ6RJM">
-                        <label for="vi">Wein 1</label>
-                        <input name="sharedVideoUrl" type="radio" id="ae" value="https://www.youtube.com/watch?v=MFb9DzT6rHc">
-                        <label for="ae">Wein 2</label> 
+                        <ul style="list-style: none;"><li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/Z5udl0NvzQU">
+                        <label>LIVESTREAM</label></li> 
+                        <li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/HIqOTR5831c">
+                        <label>01 Winzervereinigung Freyburg</label></li>
+                        <li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/ryF3ZbyPQ1g">
+                        <label>02 Winzerhof Altmann</label></li>
+                        <li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/1zeEjFmigXI">
+                        <label>03 Weingut Hey</label></li>
+                        <li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/i4z_PeeH9Ok">
+                        <label>04 Naumburger Weinbaugesellschaft</label></li>
+                        <li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/zBBCKiaoTZk">
+                        <label>05 Winzerhof Gussek</label></li>
+                        <li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/7tWejhasEu0">
+                        <label>06 Weingut Lützkendorf</label></li>
+                        <li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/8h0NM2NEaKw">
+                        <label>07 Weingut Marius Seeliger</label></li>
+                        <li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/ktgFYqD1ZOg">
+                        <label>08 Weingut Herzer</label></li>
+                        <li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/wg8XrY0rtI8">
+                        <label>09 Landesweingut Kloster Pforta</label></li>
+                        <li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/cbWv9D7-uSI">
+                        <label>10 Weingut Frölich-Hake</label></li>
+                        <li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/NCyeguP32tk">
+                        <label>11 Weinbau "Der Steinmeister"</label></li>
+                        </ul>
                     </fieldset>
                 </form>`,
                 persistent: false,
