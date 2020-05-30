@@ -736,7 +736,7 @@ function requestVideoLink() {
                 html:
                 `<form>
                     <fieldset>
-                        <ul style="list-style: none;"><li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/Z5udl0NvzQU">
+                        <ul style="list-style: none;"><li><input name="sharedVideoUrl" type="radio" value="https://www.youtube.com/watch?v=JIma4fWRPYk">
                         <label>LIVESTREAM</label></li> 
                         <li><input name="sharedVideoUrl" type="radio" value="https://youtu.be/HIqOTR5831c">
                         <label>01 Winzervereinigung Freyburg</label></li>
